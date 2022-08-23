@@ -1,0 +1,290 @@
+{
+	"info": {
+		"_postman_id": "81c13140-1a7c-4370-9707-48c2b9853f1a",
+		"name": "corda-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ManufacturerParty: Create Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"brand\": \"Hyundai\",\r\n\"model\": \"Accent\",\r\n\"year\": 10,\r\n\"color\": \"Black\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10050/api/create-car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10050",
+					"path": [
+						"api",
+						"create-car"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ManufacturerParty: Create Car",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"brand\": \"Hyundai\",\r\n\"model\": \"Accent\",\r\n\"year\": 10,\r\n\"color\": \"Black\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10050/api/create-car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10050",
+							"path": [
+								"api",
+								"create-car"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 08:26:52 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"timeStamp\": \"2022-06-22 16:26:52.786\",\n    \"description\": \"success\",\n    \"data\": \"Transaction id: 3F3595534B6B1C8076A4FB8F75E7AAAE24A32B34EF6BD5B9288A23EA59D59AB3\"\n}"
+				}
+			]
+		},
+		{
+			"name": "ManufacturerParty: transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"owner\": \"Customer\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:10050/api/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10050",
+					"path": [
+						"api",
+						"transfer"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ManufacturerParty: transfer",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"owner\": \"Customer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:10050/api/transfer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10050",
+							"path": [
+								"api",
+								"transfer"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 22 Jun 2022 08:30:12 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"timeStamp\": \"2022-06-22 16:30:12.464\",\n    \"description\": \"success\",\n    \"data\": \"Transaction id: A7A4A4C8DFFD843DF7DD2DF4D621FE27CD5933CF774BE87DFC7E2FF72D769044\"\n}"
+				}
+			]
+		},
+		{
+			"name": "GET:  Notary Identity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10051/api/notaries",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10051",
+					"path": [
+						"api",
+						"notaries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CarState",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10050/api/get-car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10050",
+					"path": [
+						"api",
+						"get-car"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "FarmerParty:  GET FarmerDetails",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:10050/api/get-farmerdetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "10050",
+							"path": [
+								"api",
+								"get-farmerdetails"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 14 Jun 2022 09:33:28 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"timeStamp\": \"2022-06-14 17:33:28.389\",\n    \"description\": \"success\",\n    \"data\": [\n        {\n            \"name\": \"John Doe\",\n            \"location\": \"Sagada PH\",\n            \"yearsInFarming\": 10,\n            \"farmSize\": 1000,\n            \"elevation\": 2500,\n            \"farmerId\": {\n                \"externalId\": null,\n                \"id\": \"f29cacfc-36e6-4c71-87c9-2966f4df82b3\"\n            },\n            \"email\": \"test@test.com\",\n            \"password\": \"Password2022\",\n            \"issuer\": \"O=Farmer, L=Rizal, C=PH\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "ManufacturerParty: Get my identity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:10050/api/myIdentity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "10050",
+					"path": [
+						"api",
+						"myIdentity"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
